@@ -1,0 +1,20 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-I../libc/include",
+      "-flto",
+      "-Wall",
+      "-Wextra",
+      "-Os",
+      "-ffreestanding",
+      "-c",
+      "-o",
+      "obj/hello.o",
+      "src/hello.c"
+    ],
+    "directory": "/home/lucabol/dev/freelib/test",
+    "file": "/home/lucabol/dev/freelib/test/src/hello.c",
+    "output": "/home/lucabol/dev/freelib/test/obj/hello.o"
+  }
+]
