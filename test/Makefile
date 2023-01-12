@@ -16,7 +16,7 @@ LDFLAGS  := -L../libc/bin -static -nostdlib -flto
 LDLIBS   := -lfslibc 
 ARFLAGS  := rc
 
-.PHONY: all clean
+.PHONY: all clean check
 
 all: $(TARGET)
 
@@ -31,5 +31,8 @@ $(BIN_DIR) $(OBJ_DIR):
 
 clean:
 	@$(RM) -rv $(BIN_DIR) $(OBJ_DIR)
+
+check:
+	for x in ./bin/*; do { echo -n "$$x : "; $$x; } ; done
 
 -include $(OBJ:.o=.d)

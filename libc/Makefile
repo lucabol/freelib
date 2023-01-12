@@ -14,7 +14,7 @@ CFLAGS   := -Wall -Wextra -Os -ffreestanding -flto
 LDLIBS   := 
 ARFLAGS  := rc
 
-.PHONY: all clean
+.PHONY: all clean check
 
 all: $(TARGET)
 
@@ -29,5 +29,7 @@ $(BIN_DIR) $(OBJ_DIR):
 
 clean:
 	@$(RM) -rv $(BIN_DIR) $(OBJ_DIR)
+
+check:
 
 -include $(OBJ:.o=.d)

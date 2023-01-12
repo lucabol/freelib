@@ -4,7 +4,7 @@
 static int screen_putc(int c, FILE *stream)
 {
     unsigned char ch = (unsigned char) c;
-    fs_write(1, &ch, 1);
+    fs_write(1, &ch, sizeof(int));
     return c;
 }
 
